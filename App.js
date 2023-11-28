@@ -1,23 +1,42 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text } from 'react-native';
-import styled from 'styled-components';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const View = styled.View`
-  flex: 1; 
-  background-color: #fff; 
-  align-items: center; 
-  justify-content: center;
-`
+const Drawer = createDrawerNavigator();
 
-export default function App() {
+function Feed() {
   return (
-    <View>
-      <StatusBar style="auto" />
-
-      <Text>hello world</Text>
-
-
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Feed Screen</Text>
     </View>
   );
 }
 
+function Article() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Article Screen</Text>
+    </View>
+  );
+}
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="Feed" component={Feed} />
+      <Drawer.Screen name="Article" component={Article} />
+    </Drawer.Navigator>
+  );
+}
+
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <StatusBar style="auto" />
+      <MyDrawer />
+    </NavigationContainer>
+  );
+}
