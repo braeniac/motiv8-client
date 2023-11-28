@@ -5,6 +5,7 @@ export const fonts = {
 };
   
 export const fontWeights = {
+    thin: 300, 
     regular: 400,
     medium: 500,
     bold: 700,

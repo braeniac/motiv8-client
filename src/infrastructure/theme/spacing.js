@@ -5,6 +5,7 @@ export const lineHeights = {
   
 export const space = [
     "0px", 
+    "2px",
     "4px", 
     "8px", 
     "16px", 

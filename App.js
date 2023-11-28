@@ -4,7 +4,13 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const Drawer = createDrawerNavigator();
+//infrastructure
+import { ThemeProvider } from "styled-components/native";
+import { theme } from './src/infrastructure/theme'; 
+
+//screens
+import { CustomDrawer } from './src/infrastructure/drawer/custom-drawer'; 
+
 
 function Feed() {
   return (
@@ -14,19 +20,57 @@ function Feed() {
   );
 }
 
-function Article() {
+function Profile() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Article Screen</Text>
+      <Text>Profile Screen</Text>
     </View>
   );
 }
 
+function Analytics() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Analytics Screen</Text>
+    </View>
+  );
+}
+
+function Exercises() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Exercises Screen</Text>
+    </View>
+  );
+}
+
+
+function More() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>More Screen</Text>
+    </View>
+  );
+}
+
+
+ 
+//react drawer navigator setup
+const Drawer = createDrawerNavigator();
+
 function MyDrawer() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      drawerContent={ props => <CustomDrawer {...props}/> }
+      screenOptions={{ 
+        headerShown: false,
+      }} 
+    >
       <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Article" component={Article} />
+      <Drawer.Screen name="Profile" component={Profile} />
+      <Drawer.Screen name="Analytics" component={Analytics} />
+      <Drawer.Screen name="Exercises" component={Exercises} />
+      <Drawer.Screen name="More" component={More} />
     </Drawer.Navigator>
   );
 }
@@ -34,9 +78,11 @@ function MyDrawer() {
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <ThemeProvider theme={theme}>
       <StatusBar style="auto" />
-      <MyDrawer />
-    </NavigationContainer>
+      <NavigationContainer>
+        <MyDrawer />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }
