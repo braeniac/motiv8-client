@@ -6,9 +6,9 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 export const Drawer = styled.View`
     flex: 1; 
     background-color: ${(props) => props.theme.colors.ui.quaternary}; 
-    margin-top:  ${(props) => props.theme.space[6]};
-    margin-bottom: ${(props) => props.theme.space[6]}; 
-    margin-left: ${(props) => props.theme.space[5]}
+    padding-top:  ${(props) => props.theme.space[6]};
+    padding-bottom: ${(props) => props.theme.space[6]}; 
+    padding-left: ${(props) => props.theme.space[5]}
 `; 
 
 export const Tab = styled.TouchableOpacity` 
@@ -25,7 +25,7 @@ export const Label = styled.Text`
     fontSize: ${(props) => props.theme.fontSizes.body}; 
     color: ${(props) => props.theme.colors.icon.primary}; 
     padding-left: ${(props) => props.theme.space[3]}; 
-    font-weight: ${(props) => props.theme.fontWeights.thin};
+    font-weight: ${(props) => props.theme.fontWeights.medium};
 `; 
 
 

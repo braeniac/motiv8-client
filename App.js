@@ -10,52 +10,14 @@ import { theme } from './src/infrastructure/theme';
 
 //screens
 import { CustomDrawer } from './src/infrastructure/drawer/custom-drawer'; 
+import { Feed } from './src/features/feed/screens/feed'; 
+import { Profile } from './src/features/profile/screens/profile'; 
+import { Analytics } from './src/features/analytics/screens/analytics'; 
+import { Exercises } from './src/features/exercises/screens/exercises'; 
+import { More } from './src/features/more/screens/more'; 
 
 
-function Feed() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
-    </View>
-  );
-}
-
-function Profile() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile Screen</Text>
-    </View>
-  );
-}
-
-function Analytics() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Analytics Screen</Text>
-    </View>
-  );
-}
-
-function Exercises() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Exercises Screen</Text>
-    </View>
-  );
-}
-
-
-function More() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>More Screen</Text>
-    </View>
-  );
-}
-
-
- 
-//react drawer navigator setup
+//drawer setup
 const Drawer = createDrawerNavigator();
 
 function MyDrawer() {

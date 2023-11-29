@@ -10,9 +10,7 @@ import {
 } from './custom-drawer-style';
 
 export const CustomDrawer = () => {
-
-    const navigation = useNavigation(); 
-    
+    const navigation = useNavigation();  
     return(
         <SafeArea>
             <Drawer>
