@@ -17,9 +17,7 @@ export const Tab = styled.TouchableOpacity`
     margin-top:  ${(props) => props.theme.space[3]};
     margin-bottom: ${(props) => props.theme.space[3]}; 
     align-items: center;
-   
 `; 
-
 
 export const Label = styled.Text`
     fontSize: ${(props) => props.theme.fontSizes.body}; 
@@ -28,8 +26,12 @@ export const Label = styled.Text`
     font-weight: ${(props) => props.theme.fontWeights.medium};
 `; 
 
-
 export const Icon = styled(Ionicons)`
     color: ${(props) => props.theme.colors.icon.primary}; 
     padding-right: ${(props) => props.theme.space[3]}; 
+`;
+
+export const Logout = styled.View`
+    padding-left: ${(props) => props.theme.space[5]};
+    padding-bottom: ${(props) => props.theme.space[6]}; 
 `;

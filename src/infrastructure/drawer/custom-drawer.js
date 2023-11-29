@@ -6,11 +6,14 @@ import {
     Drawer, 
     Label, 
     Tab,
-    Icon
+    Icon,
+    Logout
 } from './custom-drawer-style';
 
 export const CustomDrawer = () => {
+
     const navigation = useNavigation();  
+    
     return(
         <SafeArea>
             <Drawer>
@@ -35,6 +38,12 @@ export const CustomDrawer = () => {
                     <Label>More</Label>
                 </Tab>  
             </Drawer>
+            <Logout>
+                <Tab>
+                    <Icon size={24} name="log-out-outline" />
+                    <Label>Logout</Label>
+                </Tab>
+            </Logout>
         </SafeArea>
    )
 }

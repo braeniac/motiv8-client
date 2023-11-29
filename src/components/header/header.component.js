@@ -9,7 +9,7 @@ import {
     Title
 } from './header.component.style'; 
 
-export const Header = ({ title, show,  icon }) => {
+export const Header = ({ title, show, icon }) => {
     
     const navigation = useNavigation(); 
     
@@ -25,7 +25,7 @@ export const Header = ({ title, show,  icon }) => {
                 (show) ? 
                 <>
                     <Button>
-                        <Icon name={icon} size={26} />
+                        <Icon name={icon} size={25} />
                     </Button>
                 </> :
                 <>
