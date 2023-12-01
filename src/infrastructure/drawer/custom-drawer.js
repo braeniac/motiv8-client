@@ -34,7 +34,7 @@ export const CustomDrawer = () => {
                     <Label>Exercises</Label>
                 </Tab>    
                 <Tab onPress={() => navigation.navigate('More')}>
-                    <Icon size={24} name="ellipsis-horizontal-sharp" />
+                    <Icon size={24} name="ellipsis-horizontal-outline" />
                     <Label>More</Label>
                 </Tab>  
             </Drawer>
