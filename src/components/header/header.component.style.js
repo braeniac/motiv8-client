@@ -7,7 +7,8 @@ export const HeaderContainer = styled.View`
     justify-content: space-between; 
     padding-left: ${(props) => props.theme.space[4]};
     padding-right: ${(props) => props.theme.space[4]}; 
-
+    margin-top: ${(props) => props.theme.space[3]}; 
+    background-color: red; 
 `;
 
 export const Button = styled.TouchableOpacity`

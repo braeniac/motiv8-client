@@ -22,7 +22,7 @@ const error = (theme) => `
 
 const caption = (theme) => `
     font-size: ${theme.fontSizes.caption};
-    font-weight: ${theme.fontWeights.bold};
+    font-weight: ${theme.fontWeights.thin};
 `;
 
 const label = (theme) => `
