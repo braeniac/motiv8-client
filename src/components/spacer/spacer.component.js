@@ -14,8 +14,17 @@ const empty = (theme) => `
     padding-bottom: ${theme.space[4]};
 `; 
 
-const border = (theme) =>`
+const emptyColumn = (theme) => `
+    flex-direction: col;   
+    padding-top: ${theme.space[5]};
+    padding-bottom: ${theme.space[5]};
     border-color: ${theme.colors.ui.disabled}; 
+    border-top-width: 1px; 
+    border-bottom-width: 1px; 
+`; 
+
+const border = (theme) =>`
+    border-color: ${theme.colors.ui.primary}; 
     border-top-width: 1px; 
     border-bottom-width: 1px; 
     justify-content: space-between; 
@@ -25,7 +34,7 @@ const border = (theme) =>`
 `; 
 
 const borderReduced = (theme) =>`
-    border-color: ${theme.colors.ui.disabled}; 
+    border-color: ${theme.colors.ui.primary}; 
     border-top-width: 1px; 
     border-bottom-width: 1px; 
     justify-content: space-between; 
@@ -36,6 +45,7 @@ const borderReduced = (theme) =>`
 
 const variants = {
     empty,
+    emptyColumn, 
     border,
     borderReduced
 }

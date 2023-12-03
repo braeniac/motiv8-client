@@ -12,9 +12,16 @@ const body = (theme) => `
     font-size: ${theme.fontSizes.body};
 `;
 
-const hint = (theme) => `
+const bold = (theme) => `
     font-size: ${theme.fontSizes.body};
+    font-weight: ${theme.fontWeights.bold};
 `;
+
+const boldInverse = (theme) =>`
+    font-size: ${theme.fontSizes.body};
+    font-weight: ${theme.fontWeights.bold};
+    color: ${theme.colors.text.inverse}
+`
 
 const error = (theme) => `
     color: ${theme.colors.text.error};
@@ -23,6 +30,7 @@ const error = (theme) => `
 const caption = (theme) => `
     font-size: ${theme.fontSizes.caption};
     font-weight: ${theme.fontWeights.thin};
+    padding-left: ${theme.space[1]}
 `;
 
 const label = (theme) => `
@@ -30,13 +38,13 @@ const label = (theme) => `
     font-weight: ${theme.fontWeights.medium};
 `;
 
-
 const variants = { 
     body, 
     label, 
     caption, 
     error, 
-    hint
+    bold,
+    boldInverse
 }
 
 export const Text = styled.Text`

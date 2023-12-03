@@ -34,4 +34,5 @@ export const Icon = styled(Ionicons)`
 export const Logout = styled.View`
     padding-left: ${(props) => props.theme.space[5]};
     padding-bottom: ${(props) => props.theme.space[6]}; 
+    background-color: ${(props) => props.theme.colors.ui.quaternary};
 `;
