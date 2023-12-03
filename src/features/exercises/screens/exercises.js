@@ -16,8 +16,7 @@ export const Exercises = () => {
     return(
         <SafeArea>
             <ExercisesContainer>
-                <Header title="Exercises" show={true} icon="search-outline" />
-
+                <Header title="Exercises" show={false} />
                 <Search />
             </ExercisesContainer>
         </SafeArea>

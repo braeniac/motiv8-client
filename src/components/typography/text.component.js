@@ -12,9 +12,25 @@ const body = (theme) => `
     font-size: ${theme.fontSizes.body};
 `;
 
+const bodyCenter = (theme) => `
+    font-size: ${theme.fontSizes.body};
+    text-align: center;
+`
+
 const bold = (theme) => `
     font-size: ${theme.fontSizes.body};
     font-weight: ${theme.fontWeights.bold};
+`;
+
+const heading = (theme) => `
+    font-size: ${theme.fontSizes.title};
+    font-weight: ${theme.fontWeights.bold};
+`;
+
+const headingInverse = (theme) => `
+    font-size: ${theme.fontSizes.title};
+    font-weight: ${theme.fontWeights.bold};
+    color: ${theme.colors.text.inverse}; 
 `;
 
 const boldInverse = (theme) =>`
@@ -39,7 +55,10 @@ const label = (theme) => `
 `;
 
 const variants = { 
-    body, 
+    body,
+    bodyCenter, 
+    heading,
+    headingInverse,
     label, 
     caption, 
     error, 

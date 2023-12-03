@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import styled from 'styled-components'; 
 
 //components
@@ -7,8 +7,7 @@ import { Header } from '../../../components/header/header.component';
 import { Spacer } from '../../../components/spacer/spacer.component'; 
 import { Text } from '../../../components/typography/text.component'; 
 import { FeedInfoCard } from '../components/feed-info-card.component';
-
-
+import { NotificationModal } from '../components/notifications-modal.component';
 
 
 const FeedContainer = styled.ScrollView`
@@ -18,29 +17,25 @@ const FeedContainer = styled.ScrollView`
 
 export const Feed = () => {
 
+    const [alertVisable, setAlertVisable] = useState(false); 
+
+    const toggleNotificationModal = () => setAlertVisable(!alertVisable); 
+    console.log(alertVisable)
+
     return(
         <SafeArea>
             <FeedContainer>
-                <Header title="Feed" show={true} icon="notifications-outline" />
+                <Header title="Feed" show={true} icon="notifications-outline" whenPressed={toggleNotificationModal} />
 
                 <Spacer variant="borderReduced">
-                    <Text variant="error">LAST WEEK</Text>
+                    <Text variant="error">DEC 10-16</Text>
                 </Spacer>
-
+                
                 <FeedInfoCard />
-                <FeedInfoCard />
-                <FeedInfoCard />
-                <FeedInfoCard />
-                <FeedInfoCard />
-
-                <Spacer variant="borderReduced">
-                    <Text variant="error">DEC 3-9</Text>
-                </Spacer>
-
-                <FeedInfoCard />
-                <FeedInfoCard />
-                <FeedInfoCard />
-
+                
+                {
+                    (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> 
+                }
             </FeedContainer>
         </SafeArea>
     )

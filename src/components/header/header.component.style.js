@@ -27,3 +27,4 @@ export const Title = styled.Text`
     font-size: ${(props) => props.theme.fontSizes.title};
     font-weight: ${(props) => props.theme.fontWeights.bold};
 `;
+

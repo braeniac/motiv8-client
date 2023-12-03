@@ -9,7 +9,7 @@ import {
     Title
 } from './header.component.style'; 
 
-export const Header = ({ title, show, icon }) => {
+export const Header = ({ title, show, icon, whenPressed }) => {
     
     const navigation = useNavigation(); 
     
@@ -24,14 +24,14 @@ export const Header = ({ title, show, icon }) => {
             {
                 (show) ? 
                 <>
-                    <Button>
+                    <Button onPress={whenPressed}>
                         <Icon name={icon} size={25} />
                     </Button>
                 </> :
                 <>
                     <DummyIcon name="menu-outline" size={28} />
                 </>
-            }
+            }   
         </HeaderContainer>
     )
 }

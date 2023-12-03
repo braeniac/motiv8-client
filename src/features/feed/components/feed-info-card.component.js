@@ -16,7 +16,7 @@ export const FeedInfoCard = ({ feed = {} }) => {
     
     const {
         typeOfWorkout="Push",
-        title = "Friday Morning Workout", 
+        title = "Tuesday Morning Workout", 
         description = "Lat Pulldown, Seated Row, Barbell Curl", 
         date="DEC 12, 2023"
     } = feed; 
@@ -24,17 +24,18 @@ export const FeedInfoCard = ({ feed = {} }) => {
     return(
         <SafeArea>
             <Spacer variant="emptyColumn">
-                    <FeedInfoCardContainer>
-                        <TypeContainer>
-                            <Text variant="boldInverse">{typeOfWorkout}</Text>
-                        </TypeContainer>
-                        <TextContainer>
-                            <Text variant="bold"> {title} </Text>
-                            <Text variant="caption"> {description} </Text>
-                            <Text variant="body"> {date} </Text>
+                <FeedInfoCardContainer>
+                    <TypeContainer>
+                        <Text variant="boldInverse">{typeOfWorkout}</Text>
+                        <Text variant="boldInverse">Day</Text>
+                    </TypeContainer>
+                    <TextContainer>
+                        <Text variant="bold"> {title} </Text>
+                        <Text variant="caption"> {description} </Text>
+                        <Text variant="body"> {date} </Text>
                     </TextContainer>
-                    </FeedInfoCardContainer>
-                </Spacer>
+                </FeedInfoCardContainer>
+            </Spacer>
         </SafeArea>
     ) ; 
 }

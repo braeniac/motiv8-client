@@ -17,8 +17,12 @@ export const Search = () => {
                 placeholder="Search..."
                 value={search}
                 onChangeText={onChangeSearch}
-                theme={{ colors: { primary: 'green' } }} 
-            
+                style={{ 
+                    backgroundColor: '#FFFFFF',
+                    color: '#262626',
+                    borderWidth: 1,
+                }}
+                
             />
         </SearchContainer>
     )
