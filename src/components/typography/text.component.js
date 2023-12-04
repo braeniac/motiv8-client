@@ -41,6 +41,7 @@ const boldInverse = (theme) =>`
 
 const error = (theme) => `
     color: ${theme.colors.text.error};
+    font-weight: ${theme.fontWeights.bold};
 `;
 
 const caption = (theme) => `

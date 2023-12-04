@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import { Modal } from 'react-native';
 
 //components
-import { Text } from '../../../components/typography/text.component';
 import { SafeArea } from '../../../components/utils/safe-area.component';
-import { Spacer } from '../../../components/spacer/spacer.component';
 import { ModalHeader } from '../../../components/header/modal-header.component';
-
+import { DefaultInfo } from '../../../components/default/default.component';
 
 const ModalContent = styled.View`
     flex: 1;    
@@ -23,12 +21,7 @@ export const NotificationModal = ({ alertVisable, closeModal }) => {
             <ModalContent>
                 <SafeArea>
                     <ModalHeader closeModal={closeModal} title="Notifications" />
-  
-                    {/* default notification  */}
-                    <Spacer variant="emptyColumn">
-                        <Text variant="bodyCenter">You have no notifications.</Text>
-                    </Spacer>
-
+                    <DefaultInfo info="You have no notifications." />
                 </SafeArea>
             </ModalContent>        
         </Modal>
