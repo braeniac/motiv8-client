@@ -6,23 +6,11 @@ import { Modal } from 'react-native';
 import { Text } from '../../../components/typography/text.component';
 import { SafeArea } from '../../../components/utils/safe-area.component';
 import { Spacer } from '../../../components/spacer/spacer.component';
-import { BackButton } from '../../../components/button/back-button.component';
+import { ModalHeader } from '../../../components/header/modal-header.component';
 
 
 const ModalContent = styled.View`
     flex: 1;    
-`; 
-
-const Header = styled.View`   
-    flex:1; 
-    flex-direction: row; 
-    align-items: center;
-    justify-content: space-between;
-`; 
-
-const Title = styled.View`
-    background-color: ${(props) => props.theme.colors.icon.primary}; 
-    padding: ${(props) => props.theme.space[2]}
 `; 
 
 export const NotificationModal = ({ alertVisable, closeModal }) => {
@@ -34,13 +22,8 @@ export const NotificationModal = ({ alertVisable, closeModal }) => {
         >
             <ModalContent>
                 <SafeArea>
-                    <Spacer>
-                        <Header>
-                            <BackButton close={closeModal} />
-                            <Title><Text variant="headingInverse">Notifications</Text></Title>
-                        </Header>
-                    </Spacer>
-
+                    <ModalHeader closeModal={closeModal} title="Notifications" />
+  
                     {/* default notification  */}
                     <Spacer variant="emptyColumn">
                         <Text variant="bodyCenter">You have no notifications.</Text>

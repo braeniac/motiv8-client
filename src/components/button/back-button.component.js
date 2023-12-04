@@ -12,7 +12,7 @@ export const Icon = styled(Ionicons)`
     color: ${(props) => props.theme.colors.icon.primary}; 
 `;
 
-export const BackButton = ({close}) => {
+export const BackButton = ({ close }) => {
     return(
         <BackContainer onPress={close}>
             <Icon name="chevron-back-sharp" size={25} />

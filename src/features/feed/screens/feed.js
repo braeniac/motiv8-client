@@ -18,9 +18,8 @@ const FeedContainer = styled.ScrollView`
 export const Feed = () => {
 
     const [alertVisable, setAlertVisable] = useState(false); 
-
     const toggleNotificationModal = () => setAlertVisable(!alertVisable); 
-    console.log(alertVisable)
+
 
     return(
         <SafeArea>

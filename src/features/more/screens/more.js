@@ -15,7 +15,7 @@ export const More = () => {
     return(
         <SafeArea>
             <MoreContainer>
-                <Header title="More" show={true} icon="settings-outline" />
+                <Header title="More" show={false} />
             </MoreContainer>
         </SafeArea>
     )
