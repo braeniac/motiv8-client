@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export const UserContainer = styled.View`
+    flex: 0.1; 
     flex-direction: row;
     padding: ${(props) => props.theme.space[4]};
     margin-top: ${(props) => props.theme.space[4]};

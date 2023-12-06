@@ -32,24 +32,7 @@ export const Feed = () => {
                 </Spacer>
                 
                 <FeedInfoCard typeOfWorkout="Push" />
-                <FeedInfoCard typeOfWorkout="Pull"/>
-                <FeedInfoCard typeOfWorkout="Leg"/>
-
-                <Spacer variant="borderReduced">
-                    <Text variant="caption">DEC 10-16</Text>
-                </Spacer>
-
-                <DefaultInfo info="No workouts." />
-                
-
-                <Spacer variant="borderReduced">
-                    <Text variant="caption">DEC 3-9</Text>
-                </Spacer>
-
-                <FeedInfoCard typeOfWorkout="Push"/>
-                <FeedInfoCard typeOfWorkout="Pull"/>
-
-
+             
                 {
                     (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> 
                 }

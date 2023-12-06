@@ -13,20 +13,16 @@ import {
     Icon
 } from './user-info.styles';
 
-export const User = ({ img, name, lastWorkout }) => {
+export const User = ({ img, name, email, lastWorkout }) => {
     return(
-        <UserContainer>
-                <Img 
-                    src={img}
-                />
-                <Info>
-                    <Text variant="bold">{name}</Text>
-                    <LastWorkout>
-                        <Icon name="calendar-sharp" size={15} />
-                        <Text variant="caption">{lastWorkout}</Text>
-                    </LastWorkout>
-                </Info>
-        </UserContainer>
+        <>
+            <Spacer variant="borderReduced">
+                <Text variant="caption">USER</Text>
+            </Spacer>
+            <UserContainer>
+               
+            </UserContainer>
+        </>
     )
 }
 
