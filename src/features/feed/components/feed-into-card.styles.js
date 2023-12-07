@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 export const FeedInfoCardContainer = styled.TouchableOpacity`
     flex-direction: row; 
+    align-items: center; 
 `; 
 
 export const TypeContainer = styled.View`
@@ -12,6 +13,7 @@ export const TypeContainer = styled.View`
 
     margin-right: ${(props) => props.theme.space[3]}; 
     width: ${(props) => props.theme.fontSizes.h2};
+    height: ${(props) => props.theme.fontSizes.h2};
     align-items: center; 
     justify-content: center;
 `; 

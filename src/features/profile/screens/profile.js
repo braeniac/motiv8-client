@@ -30,10 +30,10 @@ export const Profile = ({ user = { } }) => {
 
     return(
         <SafeArea>
+            <Header title="Profile" show={true} icon="ellipsis-horizontal-outline" />
+            
             <ProfileContainer>
-                <Header title="Profile" show={true} icon="ellipsis-horizontal-outline" />
-                <User img={img} name={name} email={email} lastWorkout={lastWorkout} />
-                <ProfileNotes profileNotes={profileNotes} updateProfileNotes={updateProfileNotes}/>
+                
             </ProfileContainer>
         </SafeArea>
     )

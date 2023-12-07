@@ -50,6 +50,12 @@ const caption = (theme) => `
     padding-left: ${theme.space[1]}
 `;
 
+const captionBold = (theme) => `
+    font-size: ${theme.fontSizes.caption};
+    font-weight: ${theme.fontWeights.bold};
+    padding-left: ${theme.space[1]}
+`;
+
 const label = (theme) => `
     font-size: ${theme.fontSizes.body};
     font-weight: ${theme.fontWeights.medium};
@@ -62,6 +68,7 @@ const variants = {
     headingInverse,
     label, 
     caption, 
+    captionBold,
     error, 
     bold,
     boldInverse

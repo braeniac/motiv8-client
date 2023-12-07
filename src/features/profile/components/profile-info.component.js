@@ -8,12 +8,7 @@ import { Text } from '../../../components/typography/text.component';
 
 
 const TextArea = styled.ScrollView`
-    flex: 0.2; 
-    margin-top: ${(props) => props.theme.space[4]};
-    padding: ${(props) => props.theme.space[4]};
-    border-color: ${(props) => props.theme.colors.ui.disabled}; 
-    border-top-width: 1px; 
-    border-bottom-width: 1px; 
+
 `
 
 
@@ -38,9 +33,6 @@ export const ProfileNotes = ({ profileNotes, updateProfileNotes }) => {
                     value={profileNotes}
                 />
             </TextArea>
-
-
-
         </>
     )
 }

@@ -24,19 +24,20 @@ export const Feed = () => {
 
     return(
         <SafeArea>
-            <FeedContainer>
-                <Header title="Feed" show={true} icon="notifications-outline" whenPressed={toggleNotificationModal} />
-
-                <Spacer variant="borderReduced">
-                    <Text variant="caption">LAST WEEK</Text>
-                </Spacer>
+            <Header title="Feed" show={true} icon="notifications-outline" whenPressed={toggleNotificationModal} />
                 
-                <FeedInfoCard typeOfWorkout="Push" />
+                <FeedContainer>
+
+                    <Spacer variant="borderReduced">
+                        <Text variant="caption">LAST WEEK</Text>
+                    </Spacer>
+                
+                    <FeedInfoCard />
              
-                {
-                    (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> 
-                }
-            </FeedContainer>
+                    {
+                        (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> 
+                    }
+                </FeedContainer>
         </SafeArea>
     )
 }
