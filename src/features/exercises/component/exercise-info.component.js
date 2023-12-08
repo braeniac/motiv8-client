@@ -24,7 +24,7 @@ export const Img = styled.Image`
     height: 60px;
 `; 
 
-export const Exercise = ({ exercise = { } }) => {
+export const Exercise = ({ exercise = { }, whenOpened }) => {
     const { 
         img="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250",
         nameOfExercise="Smith Machine Incline Bench Press",
@@ -33,7 +33,9 @@ export const Exercise = ({ exercise = { } }) => {
      
     return(
         <ExerciseContainer>
-            <ExerciseInfo>
+            <ExerciseInfo
+                onPress={whenOpened}
+            >
                 <Img src={img} />
                 <Text variant="captionBold">{nameOfExercise}</Text>
                 <Text variant="captionBold">{lastPerformed}</Text>

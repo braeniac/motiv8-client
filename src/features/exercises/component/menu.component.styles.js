@@ -10,10 +10,12 @@ export const MenuContainer = styled.View`
     padding-left: ${(props) => props.theme.space[4]};
 `
 
-
-export const SubCategoriesContainer = styled.ScrollView` 
-    flex: 1; 
+export const Label = styled.View`
     flex-direction: row; 
+    align-items: center; 
+    padding-right: ${(props) => props.theme.space[4]};
+    margin-right: ${(props) => props.theme.space[4]};
+    border-right-width: 1px; 
 `
 
 export const Categories = styled.TouchableOpacity`
@@ -21,6 +23,12 @@ export const Categories = styled.TouchableOpacity`
     padding-right: ${(props) => props.theme.space[4]};
     align-items: center; 
 `; 
+
+
+export const SubCategoriesContainer = styled.ScrollView` 
+    flex: 1; 
+    flex-direction: row; 
+`
 
 
 export const Close = styled.TouchableOpacity`

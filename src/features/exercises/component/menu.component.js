@@ -10,6 +10,7 @@ import {
   Categories,
   Close,
   Icon,
+  Label, 
 } from "../component/menu.component.styles";
 import { categories } from "./categories";
 
@@ -49,6 +50,10 @@ export const Menu = () => {
             <Icon name="close-circle-outline" size={18} />
           </Close>
 
+          <Label>
+            <Text variant="captionBold">{chosenCategory.category}</Text>
+          </Label>
+
           {chosenCategory.sub.map((value, index) => (
             <Categories
               key={index}
@@ -56,7 +61,7 @@ export const Menu = () => {
                 setChosenSubCategory(value);
               }}
             >
-              <Text variant="captionBold">{value}</Text>
+              <Text variant="caption">{value}</Text>
             </Categories>
           ))}
         </SubCategoriesContainer>

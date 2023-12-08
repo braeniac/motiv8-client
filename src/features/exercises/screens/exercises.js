@@ -7,7 +7,9 @@ import { SafeArea } from '../../../components/utils/safe-area.component';
 import { Header } from '../../../components/header/header.component'; 
 import { Search } from '../component/search.component';
 import { Menu } from '../component/menu.component';
-import { Exercise } from '../component/exercise.component';
+import { Exercise } from '../component/exercise-info.component';
+import { Text } from '../../../components/typography/text.component';
+import { Spacer } from '../../../components/spacer/spacer.component'; 
 
 const ExercisesContainer = styled.View`
     flex: 1;  
@@ -24,6 +26,9 @@ export const Exercises = () => {
 
     const [toggleSearch, setToggleSearch] = useState(false); 
     const toggleSearchInput = () => setToggleSearch(!toggleSearch); 
+
+    const [openExerciseInfo, setOpenExerciseInfo] = useState(false); 
+    const openExercise = () => setOpenExerciseInfo(!openExerciseInfo);
   
     return(
         <SafeArea>
@@ -34,24 +39,17 @@ export const Exercises = () => {
                     <Search closeSearch={toggleSearchInput} />
                 }
                 <Menu />
+
+
+                <Spacer variant="borderReduced">
+                    <Text variant="caption">FROM YOUR HISTORY</Text>
+                </Spacer>
                 <ListContainer>
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
-                    <Exercise />
+                    <Exercise whenPressed={openExercise} />
                 </ListContainer>
+            
+            
+            
             </ExercisesContainer>
         </SafeArea>
     )
