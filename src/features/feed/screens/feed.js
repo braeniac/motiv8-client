@@ -33,6 +33,18 @@ export const Feed = () => {
                     </Spacer>
                 
                     <FeedInfoCard />
+                    <FeedInfoCard />
+
+                    <Spacer variant="borderReduced">
+                        <Text variant="caption">DEC 3-9</Text>
+                    </Spacer>
+                
+                    <FeedInfoCard />
+                    <FeedInfoCard />
+                    <FeedInfoCard />
+                    <FeedInfoCard />
+
+
              
                     {
                         (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> 

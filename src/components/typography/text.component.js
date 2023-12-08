@@ -36,7 +36,7 @@ const headingInverse = (theme) => `
 const boldInverse = (theme) =>`
     font-size: ${theme.fontSizes.body};
     font-weight: ${theme.fontWeights.bold};
-    color: ${theme.colors.text.inverse}
+    color: ${theme.colors.text.inverse};
 `
 
 const error = (theme) => `
@@ -47,13 +47,20 @@ const error = (theme) => `
 const caption = (theme) => `
     font-size: ${theme.fontSizes.caption};
     font-weight: ${theme.fontWeights.thin};
+    padding-left: ${theme.space[1]};
+`;
+
+const captionInverse = (theme) => `
+    color: ${theme.colors.text.inverse};
+    font-size: ${theme.fontSizes.caption};
+    font-weight: ${theme.fontWeights.thin};
     padding-left: ${theme.space[1]}
 `;
 
 const captionBold = (theme) => `
     font-size: ${theme.fontSizes.caption};
     font-weight: ${theme.fontWeights.bold};
-    padding-left: ${theme.space[1]}
+    padding-left: ${theme.space[1]};
 `;
 
 const label = (theme) => `
@@ -69,6 +76,7 @@ const variants = {
     label, 
     caption, 
     captionBold,
+    captionInverse,
     error, 
     bold,
     boldInverse

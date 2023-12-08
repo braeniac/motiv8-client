@@ -43,11 +43,23 @@ const borderReduced = (theme) =>`
     padding-bottom: ${theme.space[2]};
 `; 
 
+const borderReducedInverse = (theme) =>`
+    border-color: ${theme.colors.ui.primary}; 
+    background-color: ${theme.colors.ui.primary}; 
+    border-top-width: 1px; 
+    border-bottom-width: 1px; 
+    justify-content: space-between; 
+    flex-direction: row; 
+    padding-top: ${theme.space[2]};
+    padding-bottom: ${theme.space[2]};
+`; 
+
 const variants = {
     empty,
     emptyColumn, 
     border,
-    borderReduced
+    borderReduced,
+    borderReducedInverse
 }
 
 export const Spacer = styled.View`
