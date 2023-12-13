@@ -12,10 +12,10 @@ import {
     TextContainer
 } from './feed-into-card.styles';
 
-export const FeedInfoCard = ({ feed = {} }) => {
+export const FeedInfoCard = ({ feed = {}, typeOfWorkout }) => {
     
     const {
-        typeOfWorkout="Push",
+        // typeOfWorkout,
         title = "Tuesday Morning Workout", 
         description = "Lat Pulldown, Seated Row, Barbell Curl", 
         date="DEC 12, 2023"

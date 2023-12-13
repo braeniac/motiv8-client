@@ -22,6 +22,13 @@ const bold = (theme) => `
     font-weight: ${theme.fontWeights.bold};
 `;
 
+const title = (theme) => `
+    font-size: ${theme.fontSizes.title};
+    font-weight: ${theme.fontWeights.bold};
+    color: ${theme.colors.text.error}; 
+    color: ${theme.colors.text.inverse};
+`
+
 const heading = (theme) => `
     font-size: ${theme.fontSizes.title};
     font-weight: ${theme.fontWeights.bold};
@@ -79,7 +86,8 @@ const variants = {
     captionInverse,
     error, 
     bold,
-    boldInverse
+    boldInverse,
+    title
 }
 
 export const Text = styled.Text`

@@ -10,7 +10,7 @@ export const colors = {
       tertiary: "#F1F1F1",
       quaternary: "#FFFFFF",
       disabled: "#DEDEDE",
-      error: "#D0421B",
+      error: '#E50914',
       success: "#138000"
 
     },
@@ -23,7 +23,7 @@ export const colors = {
       secondary: "#757575",
       disabled: "#9C9C9C",
       inverse: "#FFFFFF",
-      error: "#D0421B",
+      error: '#E50914',
       success: "#138000"
     },
     icon: {
@@ -31,7 +31,7 @@ export const colors = {
       secondary: "#FF5733",
       tertiary: "#FFC300",
       quaternary: "#FFFFFF",
-      error: "#D0421B",
+      error: '#E50914',
       success: "#138000"
     }
 };

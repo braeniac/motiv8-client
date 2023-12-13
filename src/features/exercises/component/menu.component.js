@@ -10,7 +10,7 @@ import {
   Categories,
   Close,
   Icon,
-  Label, 
+  Label,
 } from "../component/menu.component.styles";
 import { categories } from "./categories";
 
@@ -19,8 +19,10 @@ export const Menu = () => {
   const [chosenCategory, setChosenCategory] = useState({});
   const [chosenSubCategory, setChosenSubCategory] = useState("");
 
-  console.log(chosenCategory);
 
+
+  //delete later
+  console.log(chosenCategory);
   console.log(chosenSubCategory);
 
   return (
@@ -46,7 +48,11 @@ export const Menu = () => {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
         >
-          <Close onPress={() => setPicked(false)}>
+          <Close onPress={() => {
+           setPicked(false);
+           setChosenCategory({}); 
+           setChosenSubCategory(""); 
+          }}>
             <Icon name="close-circle-outline" size={18} />
           </Close>
 

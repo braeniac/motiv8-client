@@ -21,9 +21,6 @@ export const MuscleSettingModal = ({ alertVisable,  closeModal}) => {
             <ModalContent>
                 <SafeArea>
                     <ModalHeader closeModal={closeModal} title="Muscle Setting" />
-  
-                   
-
                 </SafeArea>
             </ModalContent>        
         </Modal>

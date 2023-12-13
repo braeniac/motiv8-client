@@ -6,7 +6,6 @@ import { Text } from '../../components/typography/text.component';
 import { Spacer } from '../../components/spacer/spacer.component';
 import { BackButton } from '../../components/button/back-button.component';
 
-
 const Header = styled.View`   
     flex:1; 
     flex-direction: row; 

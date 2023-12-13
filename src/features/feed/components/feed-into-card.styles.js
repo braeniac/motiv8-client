@@ -9,7 +9,7 @@ export const FeedInfoCardContainer = styled.TouchableOpacity`
 `; 
 
 export const TypeContainer = styled.View`
-    background-color: ${(props) => props.theme.colors.ui.primary};
+    background-color: ${(props) => props.theme.colors.icon.primary};
 
     margin-right: ${(props) => props.theme.space[3]}; 
     width: ${(props) => props.theme.fontSizes.h2};

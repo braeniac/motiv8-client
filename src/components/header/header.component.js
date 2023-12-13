@@ -9,7 +9,7 @@ import {
     Title
 } from './header.component.style'; 
 
-export const Header = ({ title, show, icon, whenPressed }) => {
+export const Header = ({ title, show, start, icon, whenPressed }) => {
     
     const navigation = useNavigation(); 
     
@@ -31,7 +31,7 @@ export const Header = ({ title, show, icon, whenPressed }) => {
                 <>
                     <DummyIcon name="menu-outline" size={28} />
                 </>
-            }   
+            }
         </HeaderContainer>
     )
 }

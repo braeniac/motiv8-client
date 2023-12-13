@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import styled from 'styled-components'; 
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-//components
-import { Text } from '../../../components/typography/text.component'; 
-
 const SearchContainer = styled.View`
+    margin-left: ${(props) => props.theme.space[4]}; 
     margin-right: ${(props) => props.theme.space[4]}; 
     margin-top: ${(props) => props.theme.space[4]}; 
+    border-color: ${(props) => props.theme.colors.ui.disabled}; 
     flex-direction: row;   
     justify-content: center;
     align-items: center;
-
+    border-width: 1px; 
+    border-radius: 100px; 
 `;  
 
 const SearchInput = styled.TextInput`
@@ -40,6 +40,9 @@ export const Search = ({ closeSearch }) => {
                 placeholder="Search for an exercise"
                 value={search}
                 onChangeText={onChangeSearch}
+                autoComplete="off"
+                autoCorrect={false}
+                autoFocus={true}
             />
             <Cancel onPress={closeSearch}>
                 <Icon name="close-circle" size={25} />

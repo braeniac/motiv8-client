@@ -1,5 +1,6 @@
 import React, { useState } from 'react'; 
 import styled from 'styled-components'; 
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 //components
 import { SafeArea } from '../../../components/utils/safe-area.component'; 
@@ -13,8 +14,29 @@ import { DefaultInfo } from '../../../components/default/default.component';
 
 const FeedContainer = styled.ScrollView`
     flex: 1; 
-    background-color: ${(props) => props.theme.colors.ui.quaternary};
+  
 `; 
+
+
+const Workout = styled.TouchableOpacity`
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    padding: ${(props) => props.theme.space[3]}; 
+    margin-right: ${(props) => props.theme.space[1]}; 
+    margin-bottom: ${(props) => props.theme.space[8]}; 
+
+`
+
+
+export const Icon = styled(Ionicons)`
+    color: ${(props) => props.theme.colors.icon.error}; 
+`;
+
+
+
+
+
 
 export const Feed = () => {
 
@@ -24,32 +46,33 @@ export const Feed = () => {
 
     return(
         <SafeArea>
-            <Header title="Feed" show={true} icon="notifications-outline" whenPressed={toggleNotificationModal} />
+            <Header title="Feed" show={true} start={true} icon="notifications-outline" whenPressed={toggleNotificationModal} />
+            
+                { (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> }   
                 
                 <FeedContainer>
 
-                    <Spacer variant="borderReduced">
-                        <Text variant="caption">LAST WEEK</Text>
-                    </Spacer>
-                
-                    <FeedInfoCard />
-                    <FeedInfoCard />
 
-                    <Spacer variant="borderReduced">
-                        <Text variant="caption">DEC 3-9</Text>
-                    </Spacer>
-                
-                    <FeedInfoCard />
-                    <FeedInfoCard />
-                    <FeedInfoCard />
-                    <FeedInfoCard />
+                    <FeedInfoCard typeOfWorkout="Push" />
+                    <FeedInfoCard typeOfWorkout="Pull" />
+                    <FeedInfoCard typeOfWorkout="Push" />
+                    <FeedInfoCard typeOfWorkout="Pull" />
+                    <FeedInfoCard typeOfWorkout="Leg" />
+                    <FeedInfoCard typeOfWorkout="Push" />
+                    <FeedInfoCard typeOfWorkout="Pull" />
+                    <FeedInfoCard typeOfWorkout="Leg" />
+
+                  
 
 
-             
-                    {
-                        (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> 
-                    }
                 </FeedContainer>
+
+
+                <Workout>
+                    <Icon name="ios-add-circle-sharp" size={64} />
+                </Workout>
+
+
         </SafeArea>
     )
 }
