@@ -11,7 +11,10 @@ const ModalContent = styled.View`
     flex: 1;    
 `; 
 
-export const NotificationModal = ({ alertVisable, closeModal }) => {
+export const NotificationModal = ({ alertVisable, closeModal, notifications={} }) => {
+
+    
+
     return(
         <Modal
             animationType="slide"

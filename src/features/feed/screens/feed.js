@@ -34,10 +34,6 @@ export const Icon = styled(Ionicons)`
 `;
 
 
-
-
-
-
 export const Feed = () => {
 
     const [alertVisable, setAlertVisable] = useState(false); 
@@ -52,26 +48,32 @@ export const Feed = () => {
                 
                 <FeedContainer>
 
+                    <Spacer variant="borderReduced">
+                        <Text variant="caption">DEC 10-16</Text>
+                    </Spacer>
+
 
                     <FeedInfoCard typeOfWorkout="Push" />
                     <FeedInfoCard typeOfWorkout="Pull" />
+
+                    <Spacer variant="borderReduced">
+                        <Text variant="caption">DEC 17-23</Text>
+                    </Spacer>
+
                     <FeedInfoCard typeOfWorkout="Push" />
                     <FeedInfoCard typeOfWorkout="Pull" />
                     <FeedInfoCard typeOfWorkout="Leg" />
+                    
+                    <Spacer variant="borderReduced">
+                        <Text variant="caption">DEC 24-30</Text>
+                    </Spacer>
+
                     <FeedInfoCard typeOfWorkout="Push" />
                     <FeedInfoCard typeOfWorkout="Pull" />
                     <FeedInfoCard typeOfWorkout="Leg" />
 
-                  
-
-
+                
                 </FeedContainer>
-
-
-                <Workout>
-                    <Icon name="ios-add-circle-sharp" size={64} />
-                </Workout>
-
 
         </SafeArea>
     )
