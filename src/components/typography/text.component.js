@@ -40,6 +40,12 @@ const headingInverse = (theme) => `
     color: ${theme.colors.text.inverse}; 
 `;
 
+const headingRed = (theme) => `
+    font-size: ${theme.fontSizes.title};
+    font-weight: ${theme.fontWeights.bold};
+    color: ${theme.colors.text.error}; 
+`;
+
 const boldInverse = (theme) =>`
     font-size: ${theme.fontSizes.body};
     font-weight: ${theme.fontWeights.bold};
@@ -80,6 +86,7 @@ const variants = {
     bodyCenter, 
     heading,
     headingInverse,
+    headingRed,
     label, 
     caption, 
     captionBold,

@@ -13,8 +13,6 @@ const ModalContent = styled.View`
 
 export const NotificationModal = ({ alertVisable, closeModal, notifications={} }) => {
 
-    
-
     return(
         <Modal
             animationType="slide"
@@ -24,7 +22,7 @@ export const NotificationModal = ({ alertVisable, closeModal, notifications={} }
             <ModalContent>
                 <SafeArea>
                     <ModalHeader closeModal={closeModal} title="Notifications" />
-                    <DefaultInfo info="You have no notifications." />
+                    <DefaultInfo info="🔔 You have no notifications." />
                 </SafeArea>
             </ModalContent>        
         </Modal>

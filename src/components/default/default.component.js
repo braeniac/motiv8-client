@@ -14,3 +14,10 @@ export const DefaultInfo = ({ info }) => {
 }
 
 
+export const DateLabel = ({ dateLabel }) => {
+    return(
+        <Spacer variant="borderReduced">
+            <Text variant="caption">{dateLabel}</Text>
+        </Spacer>
+    )
+}

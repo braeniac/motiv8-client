@@ -9,71 +9,82 @@ import { Spacer } from '../../../components/spacer/spacer.component';
 import { Text } from '../../../components/typography/text.component'; 
 import { FeedInfoCard } from '../components/feed-info-card.component';
 import { NotificationModal } from '../components/notifications-modal.component';
-import { DefaultInfo } from '../../../components/default/default.component';
+import { DateLabel, DefaultInfo } from '../../../components/default/default.component';
+
+
+import { Routine } from '../components/workout/routine-modal.component';
 
 
 const FeedContainer = styled.ScrollView`
-    flex: 1; 
-  
+    flex: 0.93
 `; 
 
 
 const Workout = styled.TouchableOpacity`
     position: absolute;
+    margin-bottom: ${(props) => props.theme.space[5]}; 
+    padding-top: ${(props) => props.theme.space[3]}; 
+    padding-bottom: ${(props) => props.theme.space[3]}; 
     bottom: 0; 
     right: 0; 
-    padding: ${(props) => props.theme.space[3]}; 
-    margin-right: ${(props) => props.theme.space[1]}; 
-    margin-bottom: ${(props) => props.theme.space[8]}; 
-
+    left: 0; 
+    justify-content: center; 
+    align-items: center; 
 `
 
-
 export const Icon = styled(Ionicons)`
-    color: ${(props) => props.theme.colors.icon.error}; 
+    color: ${(props) => props.theme.colors.brand.secondary}; 
 `;
 
 
 export const Feed = () => {
 
+    //Notification 
     const [alertVisable, setAlertVisable] = useState(false); 
     const toggleNotificationModal = () => setAlertVisable(!alertVisable); 
 
+    //workout
+    const [workoutModalVisable, setWorkoutModalVisable] = useState(false); 
+    const toggleWorkoutModal = () => setWorkoutModalVisable(!workoutModalVisable); 
+
+
+
+    const [FeedInfo, setFeedInfo] = useState(true); 
 
     return(
         <SafeArea>
             <Header title="Feed" show={true} start={true} icon="notifications-outline" whenPressed={toggleNotificationModal} />
-            
+               
                 { (alertVisable) && <NotificationModal  closeModal={toggleNotificationModal} /> }   
-                
+               
                 <FeedContainer>
-
-                    <Spacer variant="borderReduced">
-                        <Text variant="caption">DEC 10-16</Text>
-                    </Spacer>
-
-
-                    <FeedInfoCard typeOfWorkout="Push" />
-                    <FeedInfoCard typeOfWorkout="Pull" />
-
-                    <Spacer variant="borderReduced">
-                        <Text variant="caption">DEC 17-23</Text>
-                    </Spacer>
-
-                    <FeedInfoCard typeOfWorkout="Push" />
-                    <FeedInfoCard typeOfWorkout="Pull" />
-                    <FeedInfoCard typeOfWorkout="Leg" />
-                    
-                    <Spacer variant="borderReduced">
-                        <Text variant="caption">DEC 24-30</Text>
-                    </Spacer>
-
-                    <FeedInfoCard typeOfWorkout="Push" />
-                    <FeedInfoCard typeOfWorkout="Pull" />
-                    <FeedInfoCard typeOfWorkout="Leg" />
-
-                
+                   {
+                    (!FeedInfo) ? 
+                        <DefaultInfo info="🏋️ Ready to get started?"/> : 
+                    <>
+                        <DateLabel dateLabel="DEC 10-16" />
+                        <FeedInfoCard typeOfWorkout="Push" />
+                    </>
+                   }
                 </FeedContainer>
+
+                {
+                    (workoutModalVisable) && 
+                        <Routine 
+                            workoutModalVisable={workoutModalVisable} 
+                            closeModal={toggleWorkoutModal}
+                        />
+                }
+
+
+                <Workout
+                    onPress={() => {
+                        toggleWorkoutModal(); 
+                    }}
+                >
+                    <Text variant="label">Start a Workout</Text>
+                </Workout>
+
 
         </SafeArea>
     )

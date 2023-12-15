@@ -28,7 +28,9 @@ export const Exercises = () => {
     const toggleSearchInput = () => setToggleSearch(!toggleSearch); 
 
     const [openExerciseInfo, setOpenExerciseInfo] = useState(false); 
-    const openExercise = () => setOpenExerciseInfo(!openExerciseInfo);
+    const openExercise = () => {
+        setOpenExerciseInfo(!openExerciseInfo)
+    };
   
     return(
         <SafeArea>
@@ -38,15 +40,18 @@ export const Exercises = () => {
                     <Header title="Exercises" show={true} icon="search-outline" whenPressed={toggleSearchInput}/> :
                     <Search closeSearch={toggleSearchInput} />
                 }
+                
                 <Menu />
-
 
                 <Spacer variant="borderReduced">
                     <Text variant="caption">FROM YOUR HISTORY</Text>
                 </Spacer>
+
                 <ListContainer>
                     <Exercise whenPressed={openExercise} />
                 </ListContainer>
+
+
             
             
             

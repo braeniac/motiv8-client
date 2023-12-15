@@ -4,21 +4,22 @@ import styled from 'styled-components';
 
 import { SafeArea } from '../../../components/utils/safe-area.component';
 import { ModalHeader } from '../../../components/header/modal-header.component';
-import { Spacer } from '../../../components/spacer/spacer.component';
-import { Text } from '../../../components/typography/text.component';
 import { Setting } from './muscle-setting-menu.component';
 
 const ModalContent = styled.View`
     flex: 1;    
 `;
 
-
 export const MuscleSettingModal = ({ alertVisable,  closeModal}) => {
 
     const [weight, setWeight] = useState(''); 
+    const selectedWeight = () => (weight === 'lbs' ? setWeight('kg') : setWeight('lbs'));
+  
     const [distance, setDistance] = useState(''); 
+    const selectedDistance = () => (distance === 'km' ? setDistance('miles') : setDistance('km'));
+
     const [bodyMeasurements, setBodyMeasurements] = useState(''); 
-    
+    const selectedBodyMeasurements = () => (bodyMeasurements === 'cm' ? setBodyMeasurements('in') : setBodyMeasurements('cm')); 
 
     return(
         <Modal
@@ -29,13 +30,9 @@ export const MuscleSettingModal = ({ alertVisable,  closeModal}) => {
             <ModalContent>
                 <SafeArea>
                     <ModalHeader closeModal={closeModal} title="Muscle Setting" />
-
-                    <Setting label="Weight" left="kg" right="lbs" />
-
-                    <Setting label="Distance" left="miles" right="km" />
-
-                    <Setting label="Body Measurements" left="in" right="cm" />
-                   
+                    <Setting label="Weight" left="kg" right="lbs" selected={selectedWeight}/>
+                    <Setting label="Distance" left="miles" right="km" selected={selectedDistance} />
+                    <Setting label="Body Measurements" left="in" right="cm" selected={selectedBodyMeasurements}/>
                 </SafeArea>
             </ModalContent>        
         </Modal>
