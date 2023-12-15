@@ -1,26 +1,15 @@
 import React from 'react';
-import styled from 'styled-components'; 
 import { Modal } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { Text } from '../../../../components/typography/text.component';
+import { ModalHeader } from '../../../../components/header/modal-header.component';
 
+import { 
+    ModalContent,
+} from './routine-modal.styles'; 
 
-const ModalContent = styled.View`
-    width: 90%;
-    height: 300px;
-    margin-bottom: 20px; 
-    background-color: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 20px;
-`; 
-
-const Icon = styled(Ionicons)`
-    color: ${(props) => props.theme.colors.icon.primary}; 
-`;
-
-const Button = styled.TouchableOpacity``; 
+import { StartInfo } from './start-info.component';
+import { AddExercise } from './add-exercise.component';
 
 export const Routine = ({ workoutModalVisable, closeModal }) => {
 
@@ -31,22 +20,18 @@ export const Routine = ({ workoutModalVisable, closeModal }) => {
             visible={workoutModalVisable}
             presentationStyle="pageSheet"
         >
-           
                 <ModalContent>
+                    <ModalHeader closeModal={closeModal} title="New Workout" />
 
-                    <Button
-                        onPress={closeModal}
-                    >
-                        <Icon name="close-circle" size={25} />
-                    </Button>
+                    <StartInfo /> 
+
+                    <AddExercise />
 
 
-                    <Text variant="bold">Push</Text>
-                    <Text variant="bold">Pull</Text>
-                    <Text variant="bold">Leg</Text>
+
+
+
                     
-
-                
             
                 </ModalContent>        
         </Modal>

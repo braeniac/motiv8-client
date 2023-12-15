@@ -76,15 +76,13 @@ export const Feed = () => {
                         />
                 }
 
-
                 <Workout
                     onPress={() => {
                         toggleWorkoutModal(); 
                     }}
                 >
-                    <Text variant="label">Start a Workout</Text>
+                    <Text variant="headingRed">Start a Workout</Text>
                 </Workout>
-
 
         </SafeArea>
     )

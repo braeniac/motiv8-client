@@ -76,6 +76,14 @@ const captionBold = (theme) => `
     padding-left: ${theme.space[1]};
 `;
 
+const captionBoldRed = (theme) => `
+    font-size: ${theme.fontSizes.caption};
+    font-weight: ${theme.fontWeights.bold};
+    padding-left: ${theme.space[1]};
+    color: ${theme.colors.text.error}; 
+`;
+
+
 const label = (theme) => `
     font-size: ${theme.fontSizes.body};
     font-weight: ${theme.fontWeights.medium};
@@ -91,6 +99,7 @@ const variants = {
     caption, 
     captionBold,
     captionInverse,
+    captionBoldRed,
     error, 
     bold,
     boldInverse,
