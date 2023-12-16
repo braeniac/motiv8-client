@@ -27,7 +27,7 @@ export const Label = styled.Text`
 `; 
 
 export const Icon = styled(Ionicons)`
-    color: ${(props) => props.theme.colors.icon.error}; 
+    color: ${(props) => props.theme.colors.icon.primary}; 
     padding-right: ${(props) => props.theme.space[3]}; 
 `;
 

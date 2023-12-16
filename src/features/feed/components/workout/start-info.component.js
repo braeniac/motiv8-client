@@ -31,4 +31,5 @@ export const StartInfo = ({ startTime = {} }) => {
             <Title><Text variant="caption">Today, {time} {periods}</Text></Title>
         </Container>
     )
+    
 }

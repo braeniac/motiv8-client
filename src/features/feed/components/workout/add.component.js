@@ -24,7 +24,7 @@ const Title = styled.View`
 `; 
 
 
-export const AddExercise = () => {
+export const AddExerciseSuperset = () => {
 
     return(
         <Container>

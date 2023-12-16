@@ -48,7 +48,6 @@ export const Feed = () => {
     const toggleWorkoutModal = () => setWorkoutModalVisable(!workoutModalVisable); 
 
 
-
     const [FeedInfo, setFeedInfo] = useState(true); 
 
     return(
@@ -81,7 +80,7 @@ export const Feed = () => {
                         toggleWorkoutModal(); 
                     }}
                 >
-                    <Text variant="headingRed">Start a Workout</Text>
+                    <Text variant="heading">Start a Workout</Text>
                 </Workout>
 
         </SafeArea>

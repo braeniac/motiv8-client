@@ -4,7 +4,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet } from 'react-native';
 
 import { Text } from '../../../../components/typography/text.component';
-import { Row } from './row-info-component';
+import { DefaultRow, Row } from './row-info-component';
 
 const Container = styled.View`
     flex-direction: col;
@@ -40,19 +40,20 @@ const Label = styled.View`
 `;
 
 const Title = styled(Text)`
-    padding-left: ${(props) => props.theme.space[6]}; 
+    margin-left: ${(props) => props.theme.space[7]}
 `;
-
 
 export const Exercise = ({ exercise = { } }) => {
 
+    const sets = [1, 2, 3, 4, 5];
+
     const { 
-        name="Rope Pushdown"
+        name="Rope Pushdown",
+        PR=[135, 10],
     } = exercise; 
 
     return(
-        <Container>
-           
+        <Container> 
             <Header>
                 <Button>
                     <HeaderLeft>
@@ -70,12 +71,14 @@ export const Exercise = ({ exercise = { } }) => {
                 <Title variant="caption">ACHIEVED</Title>
             </Label>
 
-            <Row set="1"/>
-            <Row set="2"/>
-            <Row set="3"/>
-            <Row set="4"/>
-            <Row set="5"/>
-         
+            {
+                sets.map((index) => {
+                    return(
+                        <Row key={index} set={index} />
+                    )
+                })
+            }
+            <DefaultRow />
 
         </Container>
     )
