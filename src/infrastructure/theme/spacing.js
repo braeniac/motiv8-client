@@ -11,6 +11,7 @@ export const space = [
     "16px", 
     "32px", 
     "64px", 
+    "80px", 
     "100px",
     "116px",
     "132px"

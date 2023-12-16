@@ -8,6 +8,7 @@ import { Text } from '../../../../components/typography/text.component';
 const Container = styled.View`
     flex-direction: row;
     margin-top: ${(props) => props.theme.space[5]}; 
+    margin-Bottom: ${(props) => props.theme.space[6]}; 
     padding-left: ${(props) => props.theme.space[4]}; 
     padding-top: ${(props) => props.theme.space[4]}; 
     padding-bottom: ${(props) => props.theme.space[4]}; 

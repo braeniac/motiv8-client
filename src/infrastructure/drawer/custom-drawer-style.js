@@ -23,11 +23,11 @@ export const Label = styled.Text`
     fontSize: ${(props) => props.theme.fontSizes.body}; 
     color: ${(props) => props.theme.colors.icon.primary}; 
     padding-left: ${(props) => props.theme.space[3]}; 
-    font-weight: ${(props) => props.theme.fontWeights.medium};
+    font-weight: ${(props) => props.theme.fontWeights.thin};
 `; 
 
 export const Icon = styled(Ionicons)`
-    color: ${(props) => props.theme.colors.icon.primary}; 
+    color: ${(props) => props.theme.colors.icon.error}; 
     padding-right: ${(props) => props.theme.space[3]}; 
 `;
 

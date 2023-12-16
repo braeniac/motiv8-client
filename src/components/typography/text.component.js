@@ -42,7 +42,7 @@ const headingInverse = (theme) => `
 
 const headingRed = (theme) => `
     font-size: ${theme.fontSizes.title};
-    font-weight: ${theme.fontWeights.bold};
+    font-weight: ${theme.fontWeights.thin};
     color: ${theme.colors.text.error}; 
 `;
 
