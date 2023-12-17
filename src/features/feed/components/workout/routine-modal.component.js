@@ -14,7 +14,10 @@ const ModalContent = styled.ScrollView`
     margin-top: ${(props) => props.theme.space[5]}
 `; 
 
-export const Routine = ({ workoutModalVisable, closeModal }) => {
+export const Routine = ({ startTime, workoutModalVisable, closeModal }) => {
+
+    //start time
+
     return(
         <Modal
             animationType="slide"
@@ -24,8 +27,7 @@ export const Routine = ({ workoutModalVisable, closeModal }) => {
         >
                 <ModalContent>
                     <ModalHeader closeModal={closeModal} title="New Workout" />
-                    <StartInfo /> 
-                    <Exercise  />
+                    <StartInfo startTime={startTime} /> 
                     <AddExerciseSuperset />
                 </ModalContent>        
         </Modal>

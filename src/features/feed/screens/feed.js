@@ -12,6 +12,9 @@ import { NotificationModal } from '../components/notifications-modal.component';
 import { DateLabel, DefaultInfo } from '../../../components/default/default.component';
 
 
+//service 
+import { convertToAMPM } from '../../../services/utils/convertToAMPM';
+
 import { Routine } from '../components/workout/routine-modal.component';
 
 
@@ -39,6 +42,9 @@ export const Icon = styled(Ionicons)`
 
 export const Feed = () => {
 
+    //workout history
+    const [FeedInfo, setFeedInfo] = useState(false); 
+
     //Notification 
     const [alertVisable, setAlertVisable] = useState(false); 
     const toggleNotificationModal = () => setAlertVisable(!alertVisable); 
@@ -46,9 +52,17 @@ export const Feed = () => {
     //workout
     const [workoutModalVisable, setWorkoutModalVisable] = useState(false); 
     const toggleWorkoutModal = () => setWorkoutModalVisable(!workoutModalVisable); 
-
-
-    const [FeedInfo, setFeedInfo] = useState(true); 
+    //start time
+    const [startTime, setStartTime] = useState(""); 
+    const handleStartTime = () => {
+        const dateAndTime = new Date();       
+        const time = dateAndTime.toLocaleTimeString();
+        const [hours, minutes] = time.split(':');
+        const indicator = time.match(/\b(?:AM|PM)\b/i);
+        setStartTime(`Today, ${hours}:${minutes} ${indicator}`);
+    }
+    
+    
 
     return(
         <SafeArea>
@@ -72,12 +86,17 @@ export const Feed = () => {
                         <Routine 
                             workoutModalVisable={workoutModalVisable} 
                             closeModal={toggleWorkoutModal}
+                            startTime={startTime}
                         />
                 }
 
                 <Workout
                     onPress={() => {
                         toggleWorkoutModal(); 
+                        handleStartTime(); 
+
+                        //start time  
+
                     }}
                 >
                     <Text variant="heading">Start a Workout</Text>

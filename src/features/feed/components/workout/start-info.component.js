@@ -18,17 +18,12 @@ const Title = styled.View`
     padding-left: ${(props) => props.theme.space[5]}
 `; 
 
-export const StartInfo = ({ startTime = {} }) => {
-
-    const {
-        time="1:43",
-        periods="PM"
-    } = startTime
+export const StartInfo = ({ startTime }) => {
 
     return(
         <Container>
             <Text variant="captionBold">Start Time</Text>
-            <Title><Text variant="caption">Today, {time} {periods}</Text></Title>
+            <Title><Text variant="caption">{startTime}</Text></Title>
         </Container>
     )
     
