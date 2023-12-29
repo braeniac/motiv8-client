@@ -11,10 +11,6 @@ import { FeedInfoCard } from '../components/feed-info-card.component';
 import { NotificationModal } from '../components/notifications-modal.component';
 import { DateLabel, DefaultInfo } from '../../../components/default/default.component';
 
-
-//service 
-import { convertToAMPM } from '../../../services/utils/convertToAMPM';
-
 import { Routine } from '../components/workout/routine-modal.component';
 
 
